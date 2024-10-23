@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductDetails|AppStack</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <!-- Sidebar -->
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 sidebar sidebar-hidden">
+                <div
+                    class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 ">
+                    <!-- Logo and Title -->
+                    <a href="/" class="m-4 pb-3 mb-md-0 me-md-auto  text-decoration-none ">
+                        <svg version="1.1" fill="#0D6EFD" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="24px"
+                            viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                            <path d="M19.4,4.1l-9-4C10.1,0,9.9,0,9.6,0.1l-9,4C0.2,4.2,0,4.6,0,5s0.2,0.8,0.6,0.9l9,4C9.7,10,9.9,10,10,10s0.3,0,0.4-0.1l9-4
+                            C19.8,5.8,20,5.4,20,5S19.8,4.2,19.4,4.1z" />
+                            <path d="M10,15c-0.1,0-0.3,0-0.4-0.1l-9-4c-0.5-0.2-0.7-0.8-0.5-1.3c0.2-0.5,0.8-0.7,1.3-0.5l8.6,3.8l8.6-3.8c0.5-0.2,1.1,0,1.3,0.5
+                            c0.2,0.5,0,1.1-0.5,1.3l-9,4C10.3,15,10.1,15,10,15z" />
+                            <path d="M10,20c-0.1,0-0.3,0-0.4-0.1l-9-4c-0.5-0.2-0.7-0.8-0.5-1.3c0.2-0.5,0.8-0.7,1.3-0.5l8.6,3.8l8.6-3.8c0.5-0.2,1.1,0,1.3,0.5
+                            c0.2,0.5,0,1.1-0.5,1.3l-9,4C10.3,20,10.1,20,10,20z" />
+                        </svg>
+                        <span class="fs-5 text-white d-none d-sm-inline align-middle">AppStack</span>
+                    </a>
+
+                    <!-- Navigation Menu -->
+                    <ul class="nav nav-pills flex-column mb-auto ">
+                        <li class="menu-heading mt-4 ">Navigation</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-decoration-none">
+                                <i class="bi bi-grid"></i> Dashboards
+                                <span class="badge bg-primary ms-5">5</span>
+                            </a>
+                        </li>
+
+                        <!-- Apps section -->
+                        <li class="menu-heading mt-4">Apps</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-decoration-none">
+                                <i class="bi bi-bag"></i> E-Commerce
+                            </a>
+                            <ul class="nav flex-column ms-3">
+                                <li>
+                                    <a href="index.html" class="nav-link text-decoration-none">
+                                        Products
+                                        <span class="badge bg-primary ms-5">New</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-decoration-none">
+                                        Product Details
+                                        <span class="badge bg-primary ms-3">New</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-decoration-none">
+                                        Orders
+                                        <span class="badge bg-primary ms-5">New</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-decoration-none">
+                                        Customers
+                                    </a>
+                                    <a href="#" class="nav-link text-decoration-none">
+                                        Invoice
+                                    </a>
+                                    <a href="#" class="nav-link text-decoration-none">
+                                        Pricing
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- NAV-->
+             <div class="col p-0">
+                <nav class="navbar navbar-expand-lg navbar-white bg-white ">
+                    <div class="container-fluid ">
+                        <a class="sidebar-toggle text-dark fs-4 p-1">
+                            <i class="fa-solid fa-bars-staggered"></i>
+                        </a>
+                        <form class="d-none d-sm-inline-block ">
+                            <div class="input-group input-group-navbar p-3 position-relative">
+                                <input type="text"
+                                    class="form-control rounded-0 bg-light border border-white searchinput"
+                                    placeholder="Search projects…" aria-label="Search">
+                                <button class="btn position-absolute top-50 translate-middle-y end-0 me-3"
+                                    type="button">
+                                    <i class="fa-solid fa-magnifying-glass" data-lucide="search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="dropdown me-3">
+                            <a class="nav-link dropdown-toggle " href="#" id="megaMenu" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Mega menu
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-start " aria-labelledby="servicesDropdown">
+                                <div class="d-md-flex align-items-start justify-content-start ">
+                                    <div class="dropdown-mega-list ms-3">
+                                        <div class="dropdown-header ">UI Elements</div>
+                                        <a class="dropdown-item" href="#">Alerts</a>
+                                        <a class="dropdown-item" href="#">Buttons</a>
+                                        <a class="dropdown-item" href="#">Cards</a>
+                                        <a class="dropdown-item" href="#">Carousel</a>
+                                        <a class="dropdown-item" href="#">General</a>
+                                        <a class="dropdown-item" href="#">Grid</a>
+                                        <a class="dropdown-item" href="#">Modals</a>
+                                        <a class="dropdown-item" href="#">Tabs</a>
+                                        <a class="dropdown-item" href="#">Typography</a>
+                                    </div>
+                                    <div class="dropdown-mega-list ms-5">
+                                        <div class="dropdown-header">Forms</div>
+                                        <a class="dropdown-item" href="#">Layouts</a>
+                                        <a class="dropdown-item" href="#">Basic Inputs</a>
+                                        <a class="dropdown-item" href="#">Input Groups</a>
+                                        <a class="dropdown-item" href="#">Advanced Inputs</a>
+                                        <a class="dropdown-item" href="#">Editors</a>
+                                        <a class="dropdown-item" href="#">Validation</a>
+                                        <a class="dropdown-item" href="#">Wizard</a>
+                                    </div>
+                                    <div class="dropdown-mega-list ms-5 me-3">
+                                        <div class="dropdown-header">Tables</div>
+                                        <a class="dropdown-item" href="#">Basic Tables</a>
+                                        <a class="dropdown-item" href="#">Responsive Table</a>
+                                        <a class="dropdown-item" href="#">Table with Buttons</a>
+                                        <a class="dropdown-item" href="#">Column Search</a>
+                                        <a class="dropdown-item" href="#">Muulti Selection</a>
+                                        <a class="dropdown-item" href="#">Ajax Sourced Data</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- القائمة اليمنى -->
+                        <div class="d-flex align-items-center ms-auto">
+                            <a href="#" class="nav-link position-relative fs-5 me-4">
+                                <!-- <i class="bi bi-bell"></i> -->
+                                <i class="fa-regular fa-comment"></i>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary mt-1">
+                                    4
+                                </span>
+                            </a>
+
+                            <!-- أزرار التحكم -->
+                            <a href="#" class="nav-link me-4 fs-5"><i class="fa-regular fa-bell-slash"></i></a>
+                            <a href="#" class="nav-link me-4 fs-5"><i class="fa-regular fa-moon"></i></a>
+
+                            <!-- اللغة -->
+                            <a href="#" class="nav-link me-3 "><img class=" rounded-circle" src="imgs/us.png"
+                                    height="25" width="25" alt="Language"></a>
+
+                            <!-- صورة الملف الشخصي -->
+                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
+                                data-bs-toggle="dropdown">
+                                <img src="imgs/profile.png" class="rounded-circle me-1 mt-n2 mb-n2" alt="Chris Wood"
+                                    width="50" height="50" /> <span>Chris Wood</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class='dropdown-item' href='#'><i class="align-middle me-1" data-lucide="user"></i>
+                                    Profile</a>
+                                <a class="dropdown-item" href="#"><i class="align-middle me-1"
+                                        data-lucide="pie-chart"></i> Analytics</a>
+                                <div class="dropdown-divider"></div>
+                                <a class='dropdown-item' href='$'>Settings & Privacy</a>
+                                <a class="dropdown-item" href="#">Help</a>
+                                <a class="dropdown-item" href="#">Sign out</a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </nav>
+                <!-- main content  -->
+                <main class="content p-4">
+                    <div class="container-fluid p-3">
+                        <h4 class=" mb-3">Product Details</h4>
+                        <!-- sec1 -->
+                        <div class="card border-white">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-xl-7 col-xxl-6">
+                                        
+                                            <div class="row">
+                                                <!-- productDetailsImgs -->
+                                                <div class="col-4 col-md-3 col-xxl-2">
+                                                    <div class="nav flex-column nav-outline" role="tablist"
+                                                        aria-orientation="vertical">
+                                                        <a class="nav-link active mb-2" data-bs-toggle="pill"
+                                                            href="#product-1" role="tab" aria-controls="product-1"
+                                                            aria-selected="true">
+                                                            <img src="imgs/product2.png" alt=""
+                                                                class="img-fluid mx-auto d-block rounded mh-75px">
+                                                        </a>
+                                                        <a class="nav-link mb-2" data-bs-toggle="pill" href="#product-2"
+                                                            role="tab" aria-controls="product-2" aria-selected="false"
+                                                            tabindex="-1">
+                                                            <img src="imgs/productdetail2.png" alt=""
+                                                                class="img-fluid mx-auto d-block rounded mh-75">
+                                                        </a>
+                                                        <a class="nav-link mb-2" data-bs-toggle="pill" href="#product-4"
+                                                            role="tab" aria-controls="product-4" aria-selected="false"
+                                                            tabindex="-1">
+                                                            <img src="imgs/productdetail4.png" alt=""
+                                                                class="img-fluid mx-auto d-block rounded mh-75">
+                                                        </a>
+                                                        <a class="nav-link mb-2" data-bs-toggle="pill" href="#product-3"
+                                                            role="tab" aria-controls="product-3" aria-selected="false"
+                                                            tabindex="-1">
+                                                            <img src="imgs/productdetail3.png" alt=""
+                                                                class="img-fluid mx-auto d-block rounded mh-75">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- productDisplay -->
+                                                <div class="col-8 col-md-9 col-xxl-9 offset-xxl-1">
+                                                    <div class="tab-content p-3">
+                                                        <div class="tab-pane fade active show" id="product-1" role="tabpanel">
+                                                            <div>
+                                                                <img src="imgs/product2.png" alt=""
+                                                                    class="img-fluid mx-auto d-block">
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="product-2" role="tabpanel">
+                                                            <div>
+                                                                <img src="imgs/productdetail2.png" alt=""
+                                                                    class="img-fluid mx-auto d-block">
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="product-3" role="tabpanel">
+                                                            <div>
+                                                                <img src="imgs/productdetail3.png" alt=""
+                                                                    class="img-fluid mx-auto d-block">
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="product-4" role="tabpanel">
+                                                            <div>
+                                                                <img src="imgs/productdetail4.png" alt=""
+                                                                    class="img-fluid mx-auto d-block">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    <!-- productDesc -->
+                                    <div class="col-xl-5 col-xxl-6">
+                                        <div class="mt-3">
+                                            <a href="#" class="text-primary text-decoration-none">Smartphones</a>
+                                            <h5 class="mt-1 mb-4">Apple iPhone 15 Pro Max</h5>
+                                            <p class="mb-3">
+                                                <i class="fa-solid fa-star text-warning"></i> 4.6 <span
+                                                    class="text-muted ">out of 40 Reviews</span>
+                                            </p>
+
+                                            <h6 class="mb-3 fw-bold ">Price: $1499 USD</h6>
+                                            <p class="text-muted mb-4 productdescription">Introducing the Apple iPhone
+                                                15 Pro Max 256GB in Blue Titanium. Experience unparalleled performance
+                                                with the lightning-fast A17 Pro chip, perfect for gaming
+                                                and seamless multitasking. Capture stunning photos and videos with the
+                                                triple-lens camera system, including standard, wide-angle, and telephoto
+                                                lenses,
+                                                complete with Night mode for low-light shots.</p>
+
+                                            <div class="row mb-3 productdescription">
+                                                <div class="col-md-6">
+                                                    <p class="text-muted">
+                                                        <i class="fa-solid fa-database align-middle"></i>
+                                                        <span class="align-middle">Storage: 256 GB</span>
+                                                    </p>
+                                                    <p class="text-muted">
+                                                        <i class="fa-solid fa-battery-full align-middle"></i>
+                                                        <span class="align-middle">Battery: 29 hours</span>
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p class="text-muted">
+                                                        <i class="fa-solid fa-camera align-middle"></i>
+                                                        <span class="align-middle">Megapixels: 48 MP</span>
+                                                    </p>
+                                                    <p class="text-muted">
+                                                        <i class="fa-solid fa-gear align-middle"></i>
+                                                        <span class="align-middle">Warranty: 24 Months</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="btn btn-primary mb-3 me-1 rounded-0 ">
+                                                <i class="fa fa-shopping-bag align-middle"></i>
+                                                <span class="align-middle" style="font-size: 0.9rem;">Buy now</span>
+                                            </a>
+                                            <a href="#" class="btn btn-light mb-3 rounded-0">
+                                                <i class="fa fa-shopping-cart align-middle"></i>
+                                                <span class="align-middle" style="font-size: 0.9rem;">Add to cart</span>
+                                            </a>
+
+                                            <h6>Color:</h6>
+                                            <!-- productColor -->
+                                            <div class="d-flex justify-content-start nav-outline ">
+                                                <div class=" text-center">
+                                                    <a class="nav-link active mb-1" >
+                                                        <img src="imgs/product2.png" alt="Blue"
+                                                            class="img-fluid mx-auto d-block rounded w-25 mb-1">
+                                                    </a>
+                                                    <p class="mb-0">Blue</p>
+                                                </div>
+
+                                                <div class="text-center">
+                                                    <a class="nav-link  mb-1 " >
+                                                        <img src="imgs/product3.png" alt="White"
+                                                            class="img-fluid mx-auto d-block rounded w-25 mb-1">
+                                                    </a>
+                                                    <p class="mb-0">White</p>
+                                                </div>
+
+                                                <div class=" text-center">
+                                                    <a class="nav-link  mb-1">
+                                                        <img src="imgs/product5.png" alt="Natural"
+                                                            class="img-fluid mx-auto d-block rounded w-25 mb-1">
+                                                    </a>
+                                                    <p class="mb-0">Natural</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- sec2 -->
+                        <h4 class=" mb-4 mt-4">Specifications</h4>
+                        <div class="card border-white">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="table-responsive">
+                                            <table class="table table-sm mb-0 ">
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row" style="width: 320px;">Category</th>
+                                                        <td>Smartphones</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Brand</th>
+                                                        <td>Apple</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Product number</th>
+                                                        <td>935277</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Warranty</th>
+                                                        <td>24 Months</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Color</th>
+                                                        <td>Blue</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="table-responsive">
+                                            <table class="table table-sm mb-0">
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row" style="width: 320px;">Year introduced</th>
+                                                        <td>2023</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Operating system</th>
+                                                        <td>iOS</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Operation system when introduced</th>
+                                                        <td>iOS 17</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Update frequency</th>
+                                                        <td>Each quarter</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Date of last security update</th>
+                                                        <td>September 2028</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- sec3 -->
+                        <h4 class="mb-4 mt-4">Related products</h4>
+                        <div class="row">
+                            <div class="col-sm-6 col-xl-4">
+                                <div class="card border-white">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-4">
+                                                <img src="imgs/product7.png" alt="Apple iPad Pro"
+                                                    class="img-fluid mx-auto d-block mw-75">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="text-center text-md-start pt-3 pt-md-0">
+                                                    <h5 class="text-truncate">
+                                                        <a href="#" class="text-reset text-decoration-none">Apple iPad
+                                                            Pro</a>
+                                                    </h5>
+                                                    <p class="text-muted mb-4">
+                                                        <i class="fa-solid fa-star text-warning"></i> 4.6 <span
+                                                            class="text-muted">out of 55 Reviews</span>
+                                                    </p>
+                                                    <p class="my-0"><span
+                                                            class="text-muted me-2"><strong>$1,399.00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xl-4">
+                                <div class="card border-white">
+                                    <div class="card-body  ">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-4 ">
+                                                <img src="imgs/product6.png" alt="Apple Watch SE"
+                                                    class="img-fluid mx-auto d-block mw-75 ">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="text-center text-md-start pt-2 pt-md-0">
+                                                    <h5 class="text-truncate">
+                                                        <a href="#" class="text-reset text-decoration-none">Apple Watch
+                                                            SE</a>
+                                                    </h5>
+                                                    <p class="text-muted mb-4">
+                                                        <i class="fa-solid fa-star text-warning"></i> 4.7 <span
+                                                            class="text-muted">out of 40 Reviews</span>
+                                                    </p>
+                                                    <p class="my-0"><span
+                                                            class="text-muted me-2"><strong>$299.00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xl-4">
+                                <div class="card border-white">
+                                    <div class="card-body p-4">
+                                        <div class="row align-items-center ">
+                                            <div class="col-md-4">
+                                                <img src="imgs/product4.png" alt="Apple MacBook Pro 16"
+                                                    class="img-fluid mx-auto d-block mw-75 ">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="text-center text-md-start pt-3 pt-md-0">
+                                                    <h5 class="text-truncate">
+                                                        <a href="#" class="text-reset text-decoration-none">Apple
+                                                            MacBook Pro 16</a>
+                                                    </h5>
+                                                    <p class="text-muted mb-4">
+                                                        <i class="fa-solid fa-star text-warning"></i> 4.7 <span
+                                                            class="text-muted">out of 45 Reviews</span>
+                                                    </p>
+                                                    <p class="my-0"><span
+                                                            class="text-muted me-2"><strong>$2,399.00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <!-- footer -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row ">
+                            <div class="col-6 text-start">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a class="text-muted text-decoration-none" href="#">Support</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="text-muted text-decoration-none" href="#">Help Center</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="text-muted text-decoration-none" href="#">Privacy</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="text-muted text-decoration-none" href="#">Terms of Service</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 text-end">
+                                <p class="mb-0">
+                                    &copy; 2024 - <a class='text-muted text-decoration-none' href='#'>AppStack</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        
+    </div>
+
+   
+
+
+    <script>
+        document.querySelector('.sidebar-toggle').addEventListener('click', function () {
+            if (window.innerWidth < 992) {
+                document.querySelector('.sidebar').classList.toggle('sidebar-hidden');
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
